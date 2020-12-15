@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Django Contact Form</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron mt-2">
+			<h3 class="text-center">Contact Form</h3>
+			<form method="post" action="{% url 'form' %}">
+				{% csrf_token %}
+				<div class="form-group">
+					<textarea name="message" placeholder="Message..."  class="form-control"></textarea>
+				</div>
+				<input type="submit" class="btn btn-outline-info" />
+				
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+
